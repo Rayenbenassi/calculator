@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ReadInput {
 
 	
-	public  String read() {
+	public static String read() {
 		Scanner scanner= new Scanner(System.in);
 		System.out.println("Input expression this format : 4*2/2");
 		String inputLine=scanner.nextLine();
