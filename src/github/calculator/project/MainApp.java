@@ -18,6 +18,33 @@ public class MainApp {
 		 opertaions = new LinkedList<String>(Arrays.asList(operArr));
 		 Double result = Double.parseDouble(numbers.poll());
 		 
+		 while(!numbers.isEmpty()) {
+			 String opr= opertaions.poll();
+			 Operate operate;
+			 
+			 switch (opr) {
+			 case "+":
+				 operate = new Add();
+				 break;
+			 case "-":
+				 operate = new Substract();
+				 break;
+			 case "*":
+				 operate = new Multiply();
+				 break;
+			 case "/":
+				 operate = new Devide();
+				 break;
+			default:
+				continue;
+			 }
+			 Double nm = Double.parseDouble(numbers.poll());
+			 result= operate.getResult(result,nm);
+			 
+		 }
+		 System.out.println(result);
+		 
+		 
 		 
 		 
 		 
